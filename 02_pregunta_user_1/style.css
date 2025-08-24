@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.container {
+    width: 1200px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid #1875E8;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.container__contenido {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.container__informaciones {
+    flex: 1;
+    padding: 20px;
+    margin-top: 5rem;
+}
+
+.container__boton {
+    border-radius: 16px;
+    background: #1875E8;
+    padding: 16px 24px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    margin-top: 16px;
+}
+
+.container__texto {
+    margin: 16px 0 16px 0;
+}
+
+.container__texto-azul {
+    color: #0bccd3;
+}
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 72px;
+}
+
+h2,
+p,
+button {
+    font-family: 'Inter', sans-serif;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+
+h3,
+p,
+button {
+    font-family: 'Inter', sans-serif;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.boton__Inicio{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    border-radius: 25rem;
+    background-color: #224fd8;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: .3rem;
+    padding-top: .31rem;
+    color:#ffffff;
+}
+
+.contenedor__scroll{
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    height: 10.5rem;
+    background-color: #f8f8f83c;
+    border: .1rem solid #05c5ff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: .2rem;
+}
+
+.contenedor__scroll::-webkit-scrollbar {
+    width: 12px; /* ajusta el ancho de la barra */
+}
+
+.contenedor__scroll::-webkit-scrollbar-thumb {
+    background-color: #05c5ff; /* ajusta el color de la barra */
+    border-radius: 10px;
+}
+
+.contenedor__scroll::-webkit-scrollbar-track {
+    background-color: #f8f8f83c; /* ajusta el color del fondo */
+}
+
+.pCSS{
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    opacity: 100%;
+    margin: .5em;
+    white-space: normal;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.input__CSS{
+    font-size: 1.2rem;
+    background-color: #e8e8e8;
+    margin: 0 .7rem ;
+    color:#222222;
+    padding: .3rem;
+}
+
+.clase__boton{
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #1a4f9e;
+    color:#ffffff;
+    padding: .3rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    margin-left: .5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: .3rem;
+    padding-top: .31rem;
+}
+
+@media (max-width: 800px){
+    .container {
+        width: 100%;
+        height: auto;
+    }
+    
+    .container__contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        bottom: auto;
+        padding-top: 20px; /* Agrega un padding superior para que la imagen no se corte */
+    }
+    
+    .container__imagen-robot {
+        width: 60%; /* Ajusta el ancho de la imagen del robot */
+        height: auto; /* Ajusta la altura automáticamente */
+        margin-top: 10px; /* Agrega un margen inferior para separar la imagen del contenido */
+    }
+    
+    .container__informaciones {
+        padding: 20px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,159 @@
+/* Contenedor del video */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Video en fullscreen */
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  pointer-events: none; /* Evita clics en el video */
+}
+
+/* Patrón o filtro sobre el video */
+#video_pattern {
+  background: #000;
+  opacity: 0.2; /* Ajusta para dar contraste al texto */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Contenido encima */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* Tamaño del cuadro */
+  width: 90%;
+  max-width: 1200px;
+  padding: 50px;
+  height: 80%;
+
+  /* Fondo negro con transparencia */
+  background: #000000cc;
+
+  /* Estilo extra */
+  border-radius: 15px;                   
+  box-shadow: 0 4px 30px #e6590899;
+  
+   /* Texto */
+  color: #cfcfce;
+  text-align: center;
+  font-size: 18px;
+}
+
+.p__principal{
+  font-size: 1.5rem;
+}
+
+.p__resaltado{
+  font-size: 1.5rem;
+  color:#d3de05;
+}
+
+.botonInicio{
+  margin: 20px;
+  padding: 10px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  background-color: #db5b28;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.boton__Go{
+  margin: 20px;
+  padding: 10px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  background-color: #db5b28;
+  color: #765e5e;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.contenedor__scroll{
+  width: auto;
+  word-wrap: break-word;
+  height: 21rem;
+  background-color: #f8f8f83c;
+  border: .1rem solid #05c5ff;
+  border-radius: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 20px;
+  text-align: left;
+}
+
+.contenedor__scroll::-webkit-scrollbar {
+    width: 12px; /* ajusta el ancho de la barra */
+}
+
+.contenedor__scroll::-webkit-scrollbar-thumb {
+    background-color: #ed8003; /* ajusta el color de la barra */
+    border-radius: 10px;
+}
+
+.contenedor__scroll::-webkit-scrollbar-track {
+    background-color: #f8f8f83c; /* ajusta el color del fondo */
+}
+
+.p__normal{
+  padding: 0;
+  color:#ffffff;
+  padding: 0x;
+}
+
+@media (max-width: 800px) {
+  .content {
+    width: 90%; /* Ajusta el ancho para que se adapte a la pantalla */
+    padding: 20px; /* Reduce el padding para que el contenido no se corte */
+    top: 50%; /* Ajusta la posición vertical */
+    height: 670px;
+    max-height: 670px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .button {
+    width: 100%; 
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .contenedor__scroll {
+    
+    height: 220px; /* Ajusta la altura del contenedor de scroll */
+    font-size: 14px;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Desafío 10 Número Segreto GUI ONE G9-2025</title>
+    <meta name="description" content="Juego para adivinar un número secreto 2025">
+    <meta name="author" content="Raúl Trueba Mejía, México - CDMX">
+    <link rel="icon" href="./assets/codificacion.png" type="image/png">
+</head>
+
+<body>
+
+    <div class="container">
+    <div class="container__contenido">
+        <div class="container__informaciones">
+            <!-- Titulo y texto -->
+            <div class="container__texto">
+                <h1></h1>
+                <p class="texto__parrafo"></p>
+            </div>
+            <!-- Input y botones -->
+            <input type="number" id="valorUsuario" min="1" max="10" class="container__input">
+            <div class="chute container__botones">
+                <button id="botonOk" onclick="verificarIntento();" class="container__boton">Intentar</button>
+                <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Reiniciar juego</button>
+            </div>
+        </div>
+        <img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="container__imagen-persona" />
+    </div>
+</div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

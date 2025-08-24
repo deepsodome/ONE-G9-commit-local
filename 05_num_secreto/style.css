@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.container {
+    width: 1200px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid #1875E8;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.container__contenido {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.container__informaciones {
+    flex: 1;
+    padding: 20px;
+}
+
+.container__boton {
+    border-radius: 16px;
+    background: #1875E8;
+    padding: 16px 24px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    margin-top: 16px;
+}
+
+.container__texto {
+    margin: 16px 0 16px 0;
+}
+
+.container__texto-azul {
+    color: #1875E8;
+}
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 72px;
+}
+
+h2,
+p,
+button {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+h3,
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+h3 {
+    margin-top: 2rem;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.botonInicio{
+    padding: .7rem;
+    border-radius: 25rem;
+    background-color: #1354A5;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+@media (min-width: 600px) and (max-width: 930px){
+    .container__imagen-robot {
+    width: 60%; /* Ajusta el tamaño de la imagen */
+        margin-bottom: 20px; /* Agrega un margen inferior */
+    }
+
+    h1 {
+    font-size: 55px; /* Reduce el tamaño de fuente */
+  }
+
+  h2 {
+    font-size: 35px; /* Reduce el tamaño de fuente */
+  }
+}
+
+@media (max-width: 599px){
+    .container__contenido {
+    flex-direction: column; /* Cambia la dirección a columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    position: relative; /* Cambia la posición a relativa */
+    bottom: auto; /* Elimina la posición inferior */
+    padding: 20px; /* Agrega un padding para que no se pegue a los bordes */
+  }
+
+  .container__informaciones {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+
+  .container__texto {
+    text-align: center; /* Centra el texto */
+  }
+
+  .container__imagen-robot {
+    width: 60%; /* Ajusta el tamaño de la imagen */
+    margin-bottom: 20px; /* Agrega un margen inferior */
+  }
+
+  h1 {
+    font-size: 48px; /* Reduce el tamaño de fuente */
+  }
+
+  h2 {
+    font-size: 24px; /* Reduce el tamaño de fuente */
+  }
+
+  .container__botones {
+    flex-direction: row; /* Mantiene los botones en fila */
+  }
+
+  .botonInicio {  
+    margin: 0 10px;
+  }
+}

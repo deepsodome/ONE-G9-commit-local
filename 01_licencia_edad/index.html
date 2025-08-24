@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>¿Eres mayor de edad? ONE G9-2025</title>
+    <meta name="description" content="App que pregunta edad y determina si puedes usar tener de manejo">
+    <meta name="author" content="Raúl Trueba Mejía G9 2025">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__contenido">
+            <img src="./img/robot.png" alt="Robot" class="container__imagen-robot" />
+            <div class="container__informaciones">
+                <img class="idcard" src="./img/id.png" alt="licencia manejo"/>
+                 <div class="container__texto">
+                    <h1><span id="texto__desafio" class="container__texto-azul">DESAFÍO 1</span></h1>
+                    <h2>¿Eres mayor de 18 años?..</h2>
+                    <h3>By Raúl Trueba - Deep ONE-G9 2025</h3>
+                    <button id="inicio" class="botonInicio" onclick="inicio()">Iniciar</button>
+                    <button id="reinicio" class="botonInicio" onclick="reinicio()">Reiniciar</button>                    
+                    <p id="textoMensaje" class="pCSS"></p>
+                    <div id="container__interactividad" class="interactividad">
+
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafío 7 Funciones. ONE G9-2025</title>
+  <meta name="description" content="App que simula juego de adivinanza de un número aleatorio 2025">
+  <meta name="author" content="Raúl Trueba Mejía, México - CDMX">
+  <link rel="icon" href="./assets/linea-de-comando.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="./assets/d-2.mp4" type="video/mp4">
+      Tu navegador no soporta el elemento de video.
+    </video>
+    <div id="video_pattern"></div>
+  </div>
+  <!-- Contenido sobre el video -->
+  <div class="content">
+    <h1>Desafío 7 'Funciones' - ONE G9-2025</h1>
+    <div class="container__botones">
+        <button id="inicio" class="botonInicio" onclick="inicio()">Inicio</button>
+        <button id="reinicio" class="botonInicio" onclick="reinicio()">Reinicio</button>
+    </div>
+    <div id="contenedor__scroll" class="contenedor__scroll">
+      <p>Esta App fue pensada para ver los resultados en la CONSOLA, pulsa la tecla (F12). Si no estás familiarizado con esta función te mostraré el resultado en esta ventana."</p>
+      <p>Haz clic en botón - INICIO -</p>
+    </div>
+  <p>By Raúl Trueba - Lógica de progrmación 2 - ONE G9-2025</p>
+</div>
+<script src="app.js"></script>
+  
+</body>
+</html>

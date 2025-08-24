@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío 6 ONE G9-2025</title>
+    <meta name="description" content="App que simula juego de adivinanza de un número aleatorio 2025">
+    <meta name="author" content="Raúl Trueba Mejía, México - CDMX">
+    <link rel="icon" href="./assets/linea-de-comando.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="./assets/d-1.mp4" type="video/mp4">
+      Tu navegador no soporta el elemento de video.
+    </video>
+    <div id="video_pattern"></div>
+  </div>
+
+  <!-- Contenido sobre el video -->
+  <div class="content">
+    <header>
+        <h1></h1>
+    </header>  
+    <!--<h1></h1>-->
+    <main class="container">
+      
+        <button onclick="mostarMensajeEnLaConsola()" class="button">Consola</button>
+        <button onclick="mostrarAlerta1()" class="button">Alerta</button>
+        <button onclick="mostrarAlerta2()" class="button">Prompt</button>
+        <button onclick="sumaDosNumeros()" class="button">Suma</button>
+        <button onclick="reinicio()" class="button">Reiniciar</button>
+        <div id="contenedor__scroll" class="contenedor__scroll">
+          <p>Esta App fue pensada para ver los resultados en la CONSOLA, pulsa la tecla (F12). Si no estás familiarizado con esta función te mostraré el resultado en esta ventana."</p>
+          <p>Haz clic en cualquier botón</p>
+      </div>
+      <p>By Raúl Trueba - Lógica de progrmación 2 - ONE G9-2025</p>
+    </div>
+    </main>
+  <script src="app.js"></script>  
+</body>
+</html>
