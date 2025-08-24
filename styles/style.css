@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mansalva&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mansalva&display=swap');
+
+:root{
+  --color-fondo-post-izquierdo: #b3e1e1;
+  --color-fondo-post-derecho: #a7c1ff;
+  --texto-titulos-entradas: #777777;
+  --footer-back-color: #724d74;
+  --color-ico-hamburguesa: #858585;
+  --fondo-color-menu-hamburguesa: #ffffff;
+  --sombra-menu-hamburguesa: #585858;
+  --fondo-contenedor-entradas: #cccccc;
+}
+
+.logo__principal{
+  width: 80px;
+}
+
+.hamburguesa {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.hamburguesa span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--color-ico-hamburguesa);
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.titulo__h1{
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style:normal;
+  text-align: center;
+  font-size: 3.5rem;
+  color: #5a5a5a;
+}
+
+.subtitulo__h2{
+  font-family: "Mansalva", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  font-size: 2rem;
+  color: #cd0c76ff;
+}
+
+.subtitulo__proyecto{
+  font-family: "Mansalva", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--texto-titulos-entradas);
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 3rem 1rem 1rem 1rem;
+}
+
+.contenedor__entradas__ejercicios{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--fondo-contenedor-entradas);
+  padding: 1.5rem 0 0 0;
+}
+
+.entada__ejercicio__izquierda{
+  position: relative;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-name: entrar-izquierda;
+  height: 19rem;
+  width: 40%;
+  background-color: var(--color-fondo-post-izquierdo);
+  border-radius: 2rem 0 0 .5rem;
+  margin: 0 0 2rem 0;
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.titulo__entrada__izquierda{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.texto__entrada__izquierda{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  text-align:justify;
+
+}
+
+.entrada__link__ir{
+  padding: .53rem;
+  width: 15rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--entrada-link-ir);
+  background-color: var(--color-boton-link);
+  border-radius: .5rem;
+  display: block;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.entada__ejercicio__derecha {
+  position: relative;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-name: entrar-derecha;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 19rem;
+  width: 40%;
+  background-color: var(--color-fondo-post-derecho);
+  border-radius: 0 25px .5rem 0;
+  margin: 0 0 2rem 0;
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.imagen__entrada__derecha{  
+  width: 22.5rem; 
+}
+
+footer{
+  text-align: center;
+  justify-content: center;
+  padding: 1.5rem;
+  color: antiquewhite;
+  background-color: var(--footer-back-color);
+  font-family: "Knewave", system-ui;
+  font-style:normal;
+  font-size: 1rem;
+}
+
+@keyframes entrar-izquierda {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes entrar-derecha {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 750px) and (max-width: 1000px){
+  .logo__principal{
+    width: 70px;
+  }
+
+  .hamburguesa {
+    display: block;
+  }
+  
+  .header__menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--fondo-color-menu-hamburguesa);
+    box-shadow:0rem 0rem .8rem var(--sombra-menu-hamburguesa);
+    width: 200px;
+    padding: 20px;
+    flex-direction: column;
+  }
+  
+  .header__menu.show {
+    display: block;
+  }
+
+  .titulo__h1{
+    font-size: 2rem;
+  }
+
+  .subtitulo__h2{
+    font-size: 1.52rem;
+  }
+
+  .subtitulo__proyecto{
+    font-size: 1rem;
+    margin: 1rem .5rem .5rem .5rem;
+  }
+
+  .entada__ejercicio__izquierda{
+    height: auto;
+    width: 45%;
+  }
+
+   .entada__ejercicio__derecha{
+    height: 17rem;
+    width: 45%;
+    border-radius: 0 0 2rem 2rem;
+    margin: 0;
+    z-index: 0;
+  }
+}
+
+@media (max-width: 749px){
+  .logo__principal{
+    width: 70px;
+  }
+  
+  .header__menu.show {
+    display: block;
+  }
+
+  .subtitulo__proyecto{
+    font-size: 1.3rem;
+    margin: 3rem .5rem .5rem .5rem;
+  }
+
+  .contenedor__entradas__ejercicios{
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--fondo-contenedor-entradas);
+    padding: 2rem;
+    height: 43rem;
+  }
+  .entada__ejercicio__izquierda{
+    width: 90%;
+    margin: 0;
+    border-radius: 2rem 2rem 0 0;
+    z-index: 1;
+    height: auto;
+  }
+
+  .entada__ejercicio__derecha{
+    width: 90%;
+  }
+
+.imagen__entrada__derecha{
+  width: 340px;
+}
+
+}

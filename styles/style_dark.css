@@ -1,0 +1,110 @@
+:root{
+  --color-back-body:#f2f2f2;
+  --etiqueta-dark: #949494;
+  --deslizador-back-claro: #ccc;
+  --deslizador-back-before: #fff;
+  --deslizador-back-dark: #656565;
+  --menu-a-hover: #982966;
+  --menu-fondo-activo: #b0b0b0;
+  --entrada-link-ir: #982966;
+  --entrada-titulo-ir: #3e3e3e;
+  --entrada-texto-ir: #454343;
+  --color-boton-link: #c9c9c9;
+}
+
+body {
+  background-color: var(--color-back-body); /* Puedes cambiar #f2f2f2 por el hexadecimal que desees */
+  height: 100vh;
+}
+
+nav{
+  display: flex;
+  justify-content:left;
+  align-items: center;
+  padding: 2% 10% 0 10%;
+}
+
+.header__menu{
+  display: flex;
+  justify-content:flex-end;
+  gap: 2.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.menu__inactivo{
+  text-decoration: none;
+  color: var(--etiqueta-dark);
+}
+
+li{
+  list-style: none;
+}
+
+.header__menu li {
+  margin-bottom: 10px;
+}
+
+.header__menu li a:hover{  
+  color: var(--menu-a-hover);
+}
+
+.menu__activo{
+  color: var(--menu-a-hover);
+  text-decoration: none;
+  background-color: var(--menu-fondo-activo);  
+  padding: .4rem;
+}
+
+.interruptor {
+  display: flex;
+  align-items:normal;
+  justify-content:right;
+  margin: 0 3rem 0 5rem;
+}
+
+.interruptor input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.etiqueta__dark{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--etiqueta-dark);
+  font-weight: 900;
+}
+
+.deslizador {
+  position: relative;
+  display: inline-block;
+  width: 3.75rem;
+  height: 1.6rem;
+  background-color: var(--deslizador-back-claro);
+  transition: 0.4s;
+  border-radius: 3.1rem;
+  cursor: pointer;
+}
+
+.deslizador:before {
+  content: "";
+  position: absolute;
+  height: 1.25rem;
+  width: 1.25rem;
+  left: .18rem;
+  bottom: .18rem;
+  background-color: var(--deslizador-back-before);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .deslizador {
+  background-color: var(--deslizador-back-dark);
+}
+
+input:checked + .deslizador:before {
+  transform: translateX(2.12rem);
+}
